@@ -28,16 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Mobile menu toggle
-  const toggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector(".main-nav");
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("mobile-open");
-      toggle.classList.toggle("active");
-    });
-  }
-
   // Hero: full-screen on load, shrinks into the contained card on scroll
   const heroWrap = document.querySelector(".hero-pin-wrap");
   const heroCard = document.querySelector(".hero-card");

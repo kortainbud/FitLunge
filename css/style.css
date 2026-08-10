@@ -142,21 +142,6 @@ ul { list-style: none; }
   padding: 12px 24px;
   font-size: 12px;
 }
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  padding: 8px;
-  position: relative;
-  z-index: 301;
-}
-.menu-toggle span {
-  width: 24px;
-  height: 2px;
-  background: var(--white);
-  transition: background-color 0.3s ease;
-}
-.menu-toggle.active span { background: var(--ink); }
 #site-header.solid .menu-toggle span { background: var(--ink); }
 
 /* ============ Art panels (replace stock photo/video) ============ */
@@ -772,23 +757,6 @@ ul { list-style: none; }
 /* ============ Responsive ============ */
 @media (max-width: 1000px) {
   .main-nav { display: none; }
-  .main-nav.mobile-open {
-    display: block;
-    position: fixed;
-    inset: 0 0 0 auto;
-    width: 80%;
-    max-width: 320px;
-    background: var(--bg);
-    padding: 100px 32px;
-    z-index: 300;
-    box-shadow: -10px 0 40px rgba(0,0,0,0.15);
-  }
-  .main-nav.mobile-open ul { flex-direction: column; align-items: flex-start; gap: 28px; }
-  .main-nav.mobile-open a { color: var(--ink); }
-  .menu-toggle { display: flex; }
-  .menu-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .menu-toggle.active span:nth-child(2) { opacity: 0; }
-  .menu-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .hero-bottom { flex-direction: column; align-items: flex-start; }
   .stats-row { grid-template-columns: 1fr; }
   .stat-pillar { min-height: 200px; order: -1; }
