@@ -147,6 +147,8 @@ ul { list-style: none; }
   flex-direction: column;
   gap: 5px;
   padding: 8px;
+  position: relative;
+  z-index: 301;
 }
 .menu-toggle span {
   width: 24px;
@@ -154,6 +156,7 @@ ul { list-style: none; }
   background: var(--white);
   transition: background-color 0.3s ease;
 }
+.menu-toggle.active span { background: var(--ink); }
 #site-header.solid .menu-toggle span { background: var(--ink); }
 
 /* ============ Art panels (replace stock photo/video) ============ */
