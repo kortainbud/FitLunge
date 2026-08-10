@@ -75,16 +75,59 @@ document.addEventListener("DOMContentLoaded", () => {
   // Programme pricing tabs
   const tabs = document.querySelectorAll(".programme-tab");
   const panels = document.querySelectorAll(".tier-grid");
+  const indicator = document.querySelector(".tab-indicator");
+
+  const moveIndicator = (tab) => {
+    if (!indicator) return;
+    indicator.style.width = tab.offsetWidth + "px";
+    indicator.style.transform = `translateX(${tab.offsetLeft}px)`;
+  };
+
+  const activeTabEl = document.querySelector(".programme-tab.active");
+  if (activeTabEl) {
+    requestAnimationFrame(() => moveIndicator(activeTabEl));
+  }
+
+  let switching = false;
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
+      if (switching || tab.classList.contains("active")) return;
       const target = tab.dataset.tab;
+      const currentPanel = document.querySelector(".tier-grid.active");
+      const nextPanel = document.querySelector(`.tier-grid[data-panel="${target}"]`);
+      if (!nextPanel || nextPanel === currentPanel) return;
 
+      switching = true;
       tabs.forEach((t) => t.classList.remove("active"));
       tab.classList.add("active");
+      moveIndicator(tab);
 
-      panels.forEach((panel) => {
-        panel.classList.toggle("active", panel.dataset.panel === target);
-      });
+      if (currentPanel) {
+        currentPanel.classList.remove("visible");
+        window.setTimeout(() => {
+          currentPanel.classList.remove("active");
+          nextPanel.classList.add("active");
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              nextPanel.classList.add("visible");
+              switching = false;
+            });
+          });
+        }, 350);
+      } else {
+        nextPanel.classList.add("active");
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            nextPanel.classList.add("visible");
+            switching = false;
+          });
+        });
+      }
     });
+  });
+
+  window.addEventListener("resize", () => {
+    const current = document.querySelector(".programme-tab.active");
+    if (current) moveIndicator(current);
   });
 });
