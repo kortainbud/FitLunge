@@ -763,16 +763,31 @@ ul { list-style: none; }
   .tier-grid { grid-template-columns: 1fr; }
   .tier-card.popular { transform: none; }
   .advantages-grid { grid-template-columns: 1fr 1fr; }
+  .advantage-cta { grid-column: 1 / -1; }
   .blog-grid { grid-template-columns: 1fr; }
   .footer-top { grid-template-columns: 1fr 1fr; }
+  .programme-tabs {
+    width: 100%;
+    flex-direction: column;
+    border-radius: 20px;
+    background: transparent;
+    padding: 0;
+    gap: 10px;
+  }
+  .programme-tab {
+    width: 100%;
+    text-align: center;
+    white-space: normal;
+    background: var(--card);
+  }
+  .programme-tab.active { background: var(--ink); }
 }
 @media (max-width: 640px) {
   body { font-size: 16px; }
   .hero-overlay { padding: 24px; }
   .hero-copy h1 { font-size: 44px; }
   .advantages-grid { grid-template-columns: 1fr; }
+  .advantage-cta { grid-column: auto; }
   .footer-top { grid-template-columns: 1fr 1fr; }
   #site-header .container { padding: 0 var(--pad); }
-  .programme-tabs { width: 100%; }
-  .programme-tab { flex: 1; text-align: center; padding: 14px 10px; }
 }
