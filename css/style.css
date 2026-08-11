@@ -721,7 +721,7 @@ ul { list-style: none; }
   border-top: 1px solid var(--ink-line);
   padding-top: 40px;
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr 1fr 1.3fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 .footer-col h4 {
