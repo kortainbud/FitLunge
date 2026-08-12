@@ -391,6 +391,73 @@ ul { list-style: none; }
   object-position: center 20%;
 }
 
+/* ============ More Than Medication ============ */
+#more-than-medication {
+  padding: 100px var(--pad);
+  text-align: center;
+}
+.mtm-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.mtm-copy { margin-top: 40px; }
+.mtm-copy p {
+  font-size: 19px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin-bottom: 22px;
+}
+.mtm-bold-close {
+  margin-top: 44px;
+  font-family: "GothicCompact", sans-serif;
+  font-weight: 600;
+  font-size: clamp(22px, 2.6vw, 30px);
+  line-height: 1.35;
+  color: var(--ink);
+}
+.mtm-followup {
+  margin-top: 36px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+
+/* ============ Who FitLunge Is For ============ */
+#who-for { padding: 0 var(--pad) 100px; }
+.who-for-heading {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 50px;
+}
+.who-for-grid {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.who-for-card {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.who-for-card h3 {
+  font-family: "GothicCompact", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.who-for-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
 /* ============ Intro / Stats ============ */
 #intro {
   padding: 100px var(--pad) 60px;
@@ -939,6 +1006,7 @@ ul { list-style: none; }
   .doctor-photo-panel { order: -1; min-height: 280px; }
   .tier-grid { grid-template-columns: 1fr; }
   .tier-card.popular { transform: none; }
+  .who-for-grid { grid-template-columns: 1fr 1fr; }
   .advantages-grid { grid-template-columns: 1fr 1fr; }
   .advantage-cta { grid-column: 1 / -1; }
   .blog-grid { grid-template-columns: 1fr; }
@@ -965,6 +1033,7 @@ ul { list-style: none; }
 @media (max-width: 640px) {
   body { font-size: 16px; }
   .hero-overlay { padding: 24px; }
+  .who-for-grid { grid-template-columns: 1fr; }
   .advantages-grid { grid-template-columns: 1fr; }
   .advantage-cta { grid-column: auto; }
   .footer-top { grid-template-columns: 1fr 1fr; }
