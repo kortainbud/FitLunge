@@ -651,6 +651,36 @@ ul { list-style: none; }
   margin-bottom: 20px;
 }
 
+.plan-card {
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+.plan-card.selected {
+  box-shadow: 0 0 0 3px var(--ink);
+}
+.plan-card.featured.selected {
+  box-shadow: 0 0 0 3px #f2b7dc;
+}
+
+.step2-locked-note {
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 15px;
+  margin: 0 0 50px;
+}
+.step2-wrap {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.step2-wrap.revealed { display: block; }
+.step2-wrap.revealed.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.step2-wrap.revealed ~ .step2-locked-note { display: none; }
+
 .programme-tabs {
   position: relative;
   display: inline-flex;

@@ -248,7 +248,7 @@
 
   <div class="step-label">Step 1 &mdash; Choose Your Level of Support</div>
   <div class="plan-cards">
-    <div class="plan-card">
+    <div class="plan-card" data-plan="medical">
       <div class="plan-name">FitLunge Medical</div>
       <p class="plan-desc">Doctor-supervised weight management.</p>
       <ul class="plan-features">
@@ -259,9 +259,9 @@
         <li>Injection support</li>
       </ul>
       <div class="plan-price">From &#8358;340,000 <span>/ month</span></div>
-      <a href="#footer-cta" class="eyebrow-btn btn-dark btn-block">Choose Medical</a>
+      <button type="button" class="eyebrow-btn btn-dark btn-block plan-select">Choose Medical</button>
     </div>
-    <div class="plan-card featured">
+    <div class="plan-card featured" data-plan="complete">
       <div class="badge">&#9733; Most Complete</div>
       <div class="plan-name">FitLunge Complete</div>
       <p class="plan-desc">Our complete weight-management programme.</p>
@@ -277,11 +277,12 @@
         <li>Exercise &amp; lifestyle support</li>
       </ul>
       <div class="plan-price plan-price-tbc">Pricing available on request</div>
-      <a href="#footer-cta" class="eyebrow-btn btn-light btn-block">Choose Complete</a>
+      <button type="button" class="eyebrow-btn btn-light btn-block plan-select">Choose Complete</button>
     </div>
   </div>
 
-  <div class="step-label">Step 2 &mdash; Choose Your Treatment</div>
+  <div class="step2-wrap" id="step2-wrap">
+  <div class="step-label" id="step2-label">Step 2 &mdash; Choose Your Treatment</div>
   <div class="treatment-picker">
     <h3 class="treatment-heading">Which treatment programme are you interested in?</h3>
 
@@ -348,6 +349,9 @@
       </div>
     </div>
   </div>
+  </div>
+
+  <p class="step2-locked-note" id="step2-locked-note">Choose a plan above to see treatment options and pricing.</p>
 
   <p class="programme-note">Individual medication pricing is confirmed after your medical assessment. Your doctor determines the treatment and dose that&rsquo;s appropriate for you.</p>
 </section>

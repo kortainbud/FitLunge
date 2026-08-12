@@ -130,4 +130,39 @@ document.addEventListener("DOMContentLoaded", () => {
     const current = document.querySelector(".programme-tab.active");
     if (current) moveIndicator(current);
   });
+
+  // Plan selection gates Step 2 (treatment picker)
+  const planCards = document.querySelectorAll(".plan-card");
+  const step2Wrap = document.getElementById("step2-wrap");
+  const step2Label = document.getElementById("step2-label");
+  const planNames = { medical: "FitLunge Medical", complete: "FitLunge Complete" };
+
+  planCards.forEach((card) => {
+    const btn = card.querySelector(".plan-select");
+    if (!btn) return;
+    btn.addEventListener("click", () => {
+      const plan = card.dataset.plan;
+
+      planCards.forEach((c) => c.classList.remove("selected"));
+      card.classList.add("selected");
+
+      if (step2Label) {
+        step2Label.textContent = `Step 2 — Choose Your Treatment for ${planNames[plan] || "Your Plan"}`;
+      }
+
+      const alreadyRevealed = step2Wrap.classList.contains("revealed");
+      step2Wrap.classList.add("revealed");
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          step2Wrap.classList.add("visible");
+        });
+      });
+
+      if (!alreadyRevealed) {
+        window.setTimeout(() => {
+          step2Wrap.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100);
+      }
+    });
+  });
 });
