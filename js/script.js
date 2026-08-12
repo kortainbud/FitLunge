@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Programme pricing tabs
   const tabs = document.querySelectorAll(".programme-tab");
-  const panels = document.querySelectorAll(".tier-grid");
+  const panels = document.querySelectorAll(".treatment-panel");
   const indicator = document.querySelector(".tab-indicator");
 
   const moveIndicator = (tab) => {
@@ -93,8 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
     tab.addEventListener("click", () => {
       if (switching || tab.classList.contains("active")) return;
       const target = tab.dataset.tab;
-      const currentPanel = document.querySelector(".tier-grid.active");
-      const nextPanel = document.querySelector(`.tier-grid[data-panel="${target}"]`);
+      const currentPanel = document.querySelector(".treatment-panel.active");
+      const nextPanel = document.querySelector(`.treatment-panel[data-panel="${target}"]`);
       if (!nextPanel || nextPanel === currentPanel) return;
 
       switching = true;
