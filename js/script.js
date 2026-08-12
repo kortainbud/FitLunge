@@ -155,6 +155,8 @@ document.addEventListener("DOMContentLoaded", () => {
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           step2Wrap.classList.add("visible");
+          const activeTreatmentTab = step2Wrap.querySelector(".programme-tab.active");
+          if (activeTreatmentTab) moveIndicator(activeTreatmentTab);
         });
       });
 
