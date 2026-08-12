@@ -293,69 +293,107 @@ ul { list-style: none; }
   color: var(--ink);
 }
 
-/* ============ Doctor Voice ============ */
+/* ============ Doctor Voice (split panel) ============ */
 #doctor-voice { padding: 0 var(--pad) 100px; }
-.doctor-voice-inner {
-  max-width: 900px;
+.doctor-split-card {
+  max-width: var(--container);
   margin: 0 auto;
-  text-align: center;
-}
-.doctor-copy { margin-top: 32px; }
-.doctor-copy p {
-  font-size: 18px;
-  line-height: 1.7;
-  color: var(--ink-soft);
-  margin-bottom: 18px;
-}
-.doctor-quote-card {
-  margin-top: 50px;
-  background: var(--card);
   border-radius: var(--radius);
-  padding: 48px;
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  text-align: left;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 620px;
 }
-.doctor-photo-placeholder {
-  flex-shrink: 0;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  background: var(--card-deep);
+.doctor-panel-content {
+  background: var(--ink);
+  padding: 64px 56px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  color: var(--ink-soft);
 }
-.doctor-photo-placeholder svg { width: 56px; height: 56px; }
-.doctor-quote-card blockquote p {
+.doctor-panel-heading {
+  font-family: "GothicCompact", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 24px;
+}
+.doctor-panel-heading em {
+  font-style: italic;
+  color: #f2b7dc;
+}
+.doctor-panel-intro {
+  font-size: 16px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.68);
+  margin-bottom: 32px;
+}
+.doctor-panel-quote {
+  border-left: 2px solid rgba(255,255,255,0.25);
+  padding-left: 24px;
+  margin-bottom: 36px;
+}
+.doctor-panel-quote p {
   font-family: "GothicCompact", sans-serif;
   font-weight: 400;
-  font-size: 22px;
-  line-height: 1.4;
-  color: var(--ink);
-  margin-bottom: 20px;
+  font-style: italic;
+  font-size: clamp(18px, 1.8vw, 22px);
+  line-height: 1.45;
+  color: #fff;
+  margin-bottom: 16px;
 }
-.doctor-quote-card cite {
+.doctor-panel-quote cite {
   font-style: normal;
   display: block;
   font-family: "GroteskMedium", sans-serif;
-  font-size: 15px;
-  color: var(--ink);
-}
-.doctor-quote-card cite span {
-  display: block;
-  color: var(--ink-soft);
-  font-family: "GroteskText", sans-serif;
   font-size: 14px;
+  color: #fff;
+}
+.doctor-panel-quote cite span {
+  display: block;
+  color: rgba(255,255,255,0.6);
+  font-family: "GroteskText", sans-serif;
+  font-size: 13px;
   margin-top: 2px;
 }
-.doctor-trust-line {
-  margin-top: 24px;
-  font-size: 13px;
-  letter-spacing: 0.04em;
-  color: var(--ink-soft);
+.doctor-checklist { display: flex; flex-direction: column; gap: 16px; }
+.doctor-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 15px;
+  color: rgba(255,255,255,0.85);
+}
+.check-badge {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #f2b7dc;
+}
+.doctor-photo-panel {
+  position: relative;
+  min-height: 320px;
+}
+.doctor-photo-panel .art-panel { position: absolute; }
+.photo-placeholder-label {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: "GroteskMedium", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
 }
 
 /* ============ Intro / Stats ============ */
@@ -902,6 +940,8 @@ ul { list-style: none; }
   .main-nav { display: none; }
   .stats-row { grid-template-columns: 1fr; }
   .stat-pillar { min-height: 200px; order: -1; }
+  .doctor-split-card { grid-template-columns: 1fr; min-height: auto; }
+  .doctor-photo-panel { order: -1; min-height: 280px; }
   .tier-grid { grid-template-columns: 1fr; }
   .tier-card.popular { transform: none; }
   .advantages-grid { grid-template-columns: 1fr 1fr; }
@@ -934,6 +974,6 @@ ul { list-style: none; }
   .advantage-cta { grid-column: auto; }
   .footer-top { grid-template-columns: 1fr 1fr; }
   #site-header .container { padding: 0 var(--pad); }
-  .doctor-quote-card { flex-direction: column; text-align: center; padding: 32px; }
-  .doctor-quote-card blockquote { text-align: left; }
+  .doctor-panel-content { padding: 40px 28px; }
+  .doctor-panel-quote { padding-left: 18px; }
 }
