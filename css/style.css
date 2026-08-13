@@ -1248,7 +1248,14 @@ ul { list-style: none; }
 }
 @media (max-width: 640px) {
   body { font-size: 16px; }
-  .hero-overlay { padding: 24px; }
+  .hero-overlay { padding: 20px; padding-top: 88px; }
+  .hero-eyebrow { font-size: 11px; margin-bottom: 10px; }
+  .hero-copy h1 { font-size: 26px; line-height: 1.18; }
+  .hero-copy p { font-size: 14.5px; line-height: 1.45; margin-top: 10px; }
+  .hero-actions { margin-top: 16px; gap: 12px; }
+  .hero-primary-cta { padding: 13px 22px; font-size: 12px; }
+  .hero-secondary-link { font-size: 12.5px; }
+  .hero-trust { margin-top: 12px; font-size: 11px; }
   .who-for-grid { grid-template-columns: 1fr; }
   .advantages-grid { grid-template-columns: 1fr; }
   .advantage-cta { grid-column: auto; }
