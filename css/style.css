@@ -393,7 +393,7 @@ ul { list-style: none; }
 
 /* ============ More Than Medication ============ */
 #more-than-medication {
-  padding: 100px var(--pad);
+  padding: 0 var(--pad) 100px;
   text-align: center;
 }
 .mtm-inner {
@@ -460,7 +460,7 @@ ul { list-style: none; }
 
 /* ============ Intro / Stats ============ */
 #intro {
-  padding: 100px var(--pad) 60px;
+  padding: 0 var(--pad) 100px;
   text-align: center;
 }
 #intro .intro-heading {
@@ -528,7 +528,7 @@ ul { list-style: none; }
 
 /* ============ Journey (was "When we can help") ============ */
 #journey {
-  padding: 100px 0;
+  padding: 0 0 100px;
   overflow: hidden;
 }
 #journey h2 {
@@ -613,7 +613,7 @@ ul { list-style: none; }
 
 /* ============ Programmes / Pricing ============ */
 #programmes {
-  padding: 60px var(--pad) 100px;
+  padding: 0 var(--pad) 100px;
   text-align: center;
 }
 #programmes .eyebrow-label {
@@ -1029,7 +1029,7 @@ ul { list-style: none; }
 
 /* ============ FAQ ============ */
 #faq {
-  padding: 60px var(--pad) 100px;
+  padding: 0 var(--pad) 100px;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -1152,7 +1152,7 @@ ul { list-style: none; }
 .blog-card .time { color: var(--ink-soft); font-size: 14px; }
 
 /* ============ Footer ============ */
-#site-footer { padding: 60px var(--pad) 30px; }
+#site-footer { padding: 0 var(--pad) 30px; }
 .footer-top {
   max-width: var(--container);
   margin: 0 auto;
