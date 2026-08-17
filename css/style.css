@@ -1075,7 +1075,7 @@ ul { list-style: none; }
   font-size: 16px;
   line-height: 1.6;
 }
-.faq-item:first-of-type .faq-a { padding: 0 0 28px; }
+.faq-item:first-of-type.open .faq-a { padding: 0 0 28px; }
 .faq-item:not(:first-of-type) .faq-a { padding: 0 8px; }
 
 /* ============ Transformation CTA ============ */
