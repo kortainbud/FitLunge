@@ -266,7 +266,7 @@ ul { list-style: none; }
 
 /* ============ Emotional Hook ============ */
 #emotional-hook {
-  padding: 100px var(--pad);
+  padding: 150px var(--pad);
   text-align: center;
 }
 .emotional-hook-inner {
@@ -294,7 +294,7 @@ ul { list-style: none; }
 }
 
 /* ============ Doctor Voice (split panel) ============ */
-#doctor-voice { padding: 0 var(--pad) 100px; }
+#doctor-voice { padding: 0 var(--pad) 150px; }
 .doctor-split-card {
   max-width: var(--container);
   margin: 0 auto;
@@ -393,7 +393,7 @@ ul { list-style: none; }
 
 /* ============ More Than Medication ============ */
 #more-than-medication {
-  padding: 0 var(--pad) 100px;
+  padding: 0 var(--pad) 150px;
   text-align: center;
 }
 .mtm-inner {
@@ -423,7 +423,7 @@ ul { list-style: none; }
 }
 
 /* ============ Who FitLunge Is For ============ */
-#who-for { padding: 0 var(--pad) 100px; }
+#who-for { padding: 0 var(--pad) 150px; }
 .who-for-heading {
   text-align: center;
   max-width: 780px;
@@ -460,7 +460,7 @@ ul { list-style: none; }
 
 /* ============ Intro / Stats ============ */
 #intro {
-  padding: 0 var(--pad) 100px;
+  padding: 0 var(--pad) 150px;
   text-align: center;
 }
 #intro .intro-heading {
@@ -528,7 +528,7 @@ ul { list-style: none; }
 
 /* ============ Journey (was "When we can help") ============ */
 #journey {
-  padding: 0 0 100px;
+  padding: 0 0 150px;
   overflow: hidden;
 }
 #journey h2 {
@@ -613,7 +613,7 @@ ul { list-style: none; }
 
 /* ============ Programmes / Pricing ============ */
 #programmes {
-  padding: 0 var(--pad) 100px;
+  padding: 0 var(--pad) 150px;
   text-align: center;
 }
 #programmes .eyebrow-label {
@@ -906,7 +906,7 @@ ul { list-style: none; }
 
 /* ============ What You Get ============ */
 #what-you-get {
-  padding: 0 var(--pad) 100px;
+  padding: 0 var(--pad) 150px;
   text-align: center;
 }
 #what-you-get .section-heading {
@@ -966,7 +966,7 @@ ul { list-style: none; }
 }
 
 /* ============ Advantages ============ */
-#advantages { margin: 0 var(--pad) 100px; }
+#advantages { margin: 0 var(--pad) 150px; }
 .advantages-wrap {
   max-width: var(--container);
   margin: 0 auto;
@@ -1029,7 +1029,7 @@ ul { list-style: none; }
 
 /* ============ FAQ ============ */
 #faq {
-  padding: 0 var(--pad) 100px;
+  padding: 0 var(--pad) 150px;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -1079,7 +1079,7 @@ ul { list-style: none; }
 .faq-item:not(:first-of-type) .faq-a { padding: 0 8px; }
 
 /* ============ Transformation CTA ============ */
-#transform { padding: 0 var(--pad) 100px; }
+#transform { padding: 0 var(--pad) 150px; }
 .transform-card {
   max-width: var(--container);
   margin: 0 auto;
