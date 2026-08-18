@@ -318,7 +318,7 @@ ul { list-style: none; }
   font-size: clamp(28px, 3vw, 40px);
   line-height: 1.2;
   color: #fff;
-  margin-bottom: 24px;
+  margin-bottom: 36px;
 }
 .doctor-panel-heading em {
   font-style: italic;
