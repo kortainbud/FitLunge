@@ -545,6 +545,8 @@ ul { list-style: none; }
 .journey-scroll {
   display: flex;
   gap: 16px;
+  max-width: var(--container);
+  margin: 0 auto;
   overflow-x: auto;
   padding: 0 var(--pad) 20px;
   scroll-snap-type: x proximity;
