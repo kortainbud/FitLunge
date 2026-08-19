@@ -1273,3 +1273,29 @@ ul { list-style: none; }
   .doctor-photo-panel { min-height: 480px; }
   .doctor-photo { object-position: center 0%; }
 }
+
+/* ============ WhatsApp floating button ============ */
+.contact-bubble {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  z-index: 999;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.contact-bubble:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+}
+.contact-bubble svg { width: 30px; height: 30px; color: var(--white); }
+@media (max-width: 640px) {
+  .contact-bubble { right: 16px; bottom: 16px; width: 50px; height: 50px; }
+  .contact-bubble svg { width: 26px; height: 26px; }
+}
