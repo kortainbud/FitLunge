@@ -1097,7 +1097,14 @@ ul { list-style: none; }
   overflow: hidden;
 }
 .transform-card h2 { margin-bottom: 30px; }
-.transform-card .eyebrow-btn { margin-bottom: 30px; }
+.transform-cta-group {
+  display: inline-flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.btn-outline:hover { background: var(--ink); color: var(--bg); }
 .transform-art {
   width: 100%;
   max-width: 560px;
