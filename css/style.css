@@ -1223,6 +1223,7 @@ ul { list-style: none; }
   justify-content: space-between;
   font-size: 13px;
   color: var(--ink-soft);
+  padding-right: 90px;
 }
 
 /* ============ Responsive ============ */
@@ -1274,6 +1275,7 @@ ul { list-style: none; }
   .advantages-grid { grid-template-columns: 1fr; }
   .advantage-cta { grid-column: auto; }
   .footer-top { grid-template-columns: 1fr 1fr; }
+  .footer-bottom { flex-direction: column; gap: 6px; }
   #site-header .container { padding: 0 var(--pad); }
   .doctor-panel-content { padding: 40px 28px; }
   .doctor-panel-quote { padding-left: 18px; }
